@@ -1,0 +1,47 @@
+
+.RippleEffectCircle-init {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 100%;
+    z-index: 1;
+
+    animation-name: grow;
+    animation-duration: 0.5s;
+    animation-fill-mode:forwards;
+    animation-iteration-count: 1;
+}
+
+.RippleEffectCircle-clear {
+
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    transform: translate(-50%, -50%) scale(1);
+    border-radius: 100%;
+    z-index: 1;
+
+    animation-name: clear;
+    animation-duration: 0.2s;
+    animation-fill-mode:forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes grow {
+    from {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes clear {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

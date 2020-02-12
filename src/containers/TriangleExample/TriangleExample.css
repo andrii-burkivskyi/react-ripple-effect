@@ -1,0 +1,19 @@
+
+.TriangleExample-container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.TriangleExample-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    background-color: yellowgreen;
+    shape-outside: polygon(0 0, 0 300px, 300px 300px);
+    clip-path: polygon(0 0, 0 300px, 300px 300px);
+}

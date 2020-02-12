@@ -1,0 +1,31 @@
+.RippleEffect-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.RippleEffect-circle {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 100%;
+    z-index: 1;
+
+    animation-name: grow;
+    animation-duration: 0.5s;
+    animation-fill-mode:forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes grow {
+    from {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
