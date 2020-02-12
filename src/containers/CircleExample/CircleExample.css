@@ -7,6 +7,16 @@
     justify-content: center;
 }
 
+.CircleExample-item-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, .5);
+    border-radius: 100%;
+}
+
 .CircleExample-item {
     display: flex;
     align-items: center;
@@ -14,5 +24,5 @@
     width: 300px;
     height: 300px;
     border-radius: 100%;
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, .5);
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
 }

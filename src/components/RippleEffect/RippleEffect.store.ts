@@ -22,7 +22,6 @@ export class RippleEffectStore {
 
     @action onMouseDown = (element: React.MouseEvent<ValidRefComponents>) => {
         if (!this.ref.current) { return; }
-        // const rect = this.ref.current?.getBoundingClientRect();
         this.ref.current.style.position = "relative";
 
         if (!this.isUnbound) {

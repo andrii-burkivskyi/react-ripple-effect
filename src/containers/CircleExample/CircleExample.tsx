@@ -11,14 +11,17 @@ export class CircleExample extends React.Component<ViewOf<CircleExampleStore>> {
     render() {
         return (
             <div className="CircleExample-container">
-                <div
-                    className="CircleExample-item"
-                    ref={this.props.model.rippleEffect.ref}
-                    onMouseDown={this.props.model.rippleEffect.onMouseDown}
-                    onMouseUp={this.props.model.rippleEffect.clearFirstCircle}
-                    onMouseLeave={this.props.model.rippleEffect.clearFirstCircle}
-                >
-                    <RippleEffect model={this.props.model.rippleEffect} />
+                {/* this wrapper needs for fix mobile bug: https://forum.webflow.com/t/safari-not-hiding-overflow-on-rounded-corner-divs/55060 */}
+                <div className="CircleExample-item-wrapper">
+                    <div
+                        className="CircleExample-item"
+                        ref={this.props.model.rippleEffect.ref}
+                        onMouseDown={this.props.model.rippleEffect.onMouseDown}
+                        onMouseUp={this.props.model.rippleEffect.clearFirstCircle}
+                        onMouseLeave={this.props.model.rippleEffect.clearFirstCircle}
+                    >
+                        <RippleEffect model={this.props.model.rippleEffect} />
+                    </div>
                 </div>
             </div>
         )
